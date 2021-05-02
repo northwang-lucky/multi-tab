@@ -4,7 +4,7 @@
       <el-col :span="10">
         <el-card shadow="hover">
           <div class="basic-info-container">
-            <el-avatar src="http://119.23.250.171:8888/img/avatar.png" shape="circle" :size="100" />
+            <el-avatar :src="require('@/assets/images/avatar.png')" shape="circle" :size="100" />
             <p class="info-name">W先生</p>
             <p class="info-desc">一个热爱前端开发，乐于分享的大学僧</p>
             <a
@@ -68,7 +68,7 @@
             <span class="describe-card__title">项目简介</span>
           </template>
           <div class="describe-card__content">
-            <a href="https://github.com/wyb199877/multi-tabs" target="_blank" class="github">
+            <a href="https://github.com/wyb199877/multi-tab" target="_blank" class="github">
               <svg width="70" height="70" viewBox="0 0 250 250">
                 <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" class="octo-bg" />
                 <path

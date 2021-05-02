@@ -4,8 +4,12 @@ const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const path = require('path')
 
 const options = {
-  // public目录的位置
-  publicPath: '/',
+  /**
+   * public目录的位置
+   * 如果你需要部署到GitHub Pages上，您需要设置为/仓库名/
+   * 因为GitHub Pages默认访问https://你的用户名.github.io/项目名/
+   */
+  publicPath: '/multi-tab/',
 
   // 是否开启eslint保存检测，有效值：ture | false | 'error'
   lintOnSave: IS_DEV,

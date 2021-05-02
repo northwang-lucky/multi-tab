@@ -36,7 +36,7 @@
         &emsp;
         <el-divider direction="vertical" />
         &emsp;
-        <el-avatar src="http://119.23.250.171:8888/img/avatar.png" size="medium" shape="square" />
+        <el-avatar :src="avatar" size="medium" shape="square" />
         &nbsp;&nbsp;&nbsp;
         <el-dropdown
           trigger="click"
@@ -111,6 +111,10 @@ export default defineComponent({
   },
   props: {
     username: {
+      type: String,
+      required: true
+    },
+    avatar: {
       type: String,
       required: true
     },

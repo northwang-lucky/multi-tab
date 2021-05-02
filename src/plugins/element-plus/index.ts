@@ -92,7 +92,7 @@ const Element = {
     // 添加全部主题包
     Setting.THEME_LIST.forEach((theme) => {
       const link = document.createElement('link')
-      link.href = `/theme/${theme.name}/index.css`
+      link.href = `./theme/${theme.name}/index.css`
       link.rel = 'stylesheet'
       link.type = 'text/css'
       document.head.appendChild(link)

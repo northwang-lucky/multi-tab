@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteLocationNormalized } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteLocationNormalized } from 'vue-router'
 import Consts from '@/consts'
 import store from '@/store'
 import routes from './routes'
@@ -7,7 +7,7 @@ import { BreadcrumbItemProps } from '@/layout/components/HeaderToolbar/typings'
 import { MenuItemType } from '@/layout/components/AsideBar/typings'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
 

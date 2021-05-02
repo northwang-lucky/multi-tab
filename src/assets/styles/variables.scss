@@ -69,9 +69,6 @@ $app-main__bg-color: #f0f2f5 !default;
 /*** breadcrumb ***/
 $breadcrumb__no-redirect--color: #97a8be !default;
 
-/*** login ***/
-$login__bg: url('/imgs/login-bg.jpg') no-repeat center;
-
 :export {
   /*** aside-bar ***/
   ASIDE_BAR_BG_COLOR: $aside-bar__bg-color;

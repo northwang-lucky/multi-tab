@@ -10,6 +10,7 @@
       <el-container class="wrapper-container__right">
         <header-toolbar
           username="W先生-SirW"
+          :avatar="require('@/assets/images/avatar.png')"
           :dropdown-menu="Setting.DROP_DOWN_LIST"
           @drop-command="onDropCommand"
           @icon-click="onIconClick"
@@ -35,12 +36,12 @@
       <main class="qrcode">
         <div class="wechat">
           <h1>WeChat</h1>
-          <img src="/imgs/wechat-qrcode.png" width="220" height="220" />
+          <img src="@/assets/images/wechat-qrcode.png" width="220" height="220" />
         </div>
         <div class="vline" />
         <div class="alipay">
           <h1>AliPay</h1>
-          <img src="/imgs/alipay-qrcode.png" width="220" height="220" />
+          <img src="@/assets/images/alipay-qrcode.png" width="220" height="220" />
         </div>
       </main>
     </div>
@@ -157,7 +158,7 @@ export default defineComponent({
     const onDropCommand = (command: DropCommand) => {
       switch (command) {
         case 'github':
-          window.open('https://github.com/wyb199877/multi-tabs', '_blank')
+          window.open('https://github.com/wyb199877/multi-tab', '_blank')
           break
         case 'money':
           showMoneyDialog.value = true

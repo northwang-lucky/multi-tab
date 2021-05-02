@@ -45,7 +45,7 @@
               </el-form-item>
             </el-col>
             <el-col :span="7">
-              <img src="/imgs/check-code.png" class="checkcode" />
+              <img src="@/assets/images/check-code.png" class="checkcode" />
             </el-col>
           </el-row>
         </el-form>
@@ -142,7 +142,7 @@ export default defineComponent({
 .login__bg {
   width: inherit;
   height: inherit;
-  background: $login__bg;
+  background: url('../../assets/images/login-bg.jpg') no-repeat center;
   background-size: cover;
   position: relative;
   transition: filter 300ms;
