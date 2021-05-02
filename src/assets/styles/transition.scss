@@ -1,0 +1,71 @@
+/*** aside-bar-logo-anim  ***/
+.aside-bar-logo-anim-enter-active,
+.aside-bar-logo-anim-leave-active {
+  transition: transform 400ms, opacity 400ms;
+}
+
+.aside-bar-logo-anim-enter-from,
+.aside-bar-logo-anim-leave-to {
+  transform: translateX(50%);
+  opacity: 0;
+}
+
+/*** aside-bar-header-anim  ***/
+.aside-bar-header-anim-enter-active,
+.aside-bar-header-anim-leave-active {
+  transition: transform 400ms, opacity 400ms;
+}
+
+.aside-bar-header-anim-enter-from,
+.aside-bar-header-anim-leave-to {
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+/* breadcrumb transition */
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all .5s;
+}
+
+.breadcrumb-enter-from,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all .5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+/* fade-transform-x */
+.fade-transform-x-leave-active,
+.fade-transform-x-enter-active {
+  transition: all 500ms;
+}
+
+.fade-transform-x-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-transform-x-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/*** fade-transform-y  ***/
+.fade-transform-y-enter-active,
+.fade-transform-y-leave-active {
+  transition: transform 400ms, opacity 400ms;
+}
+
+.fade-transform-y-enter-from,
+.fade-transform-y-leave-to {
+  transform: translateY(-50%);
+  opacity: 0;
+}

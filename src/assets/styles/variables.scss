@@ -1,0 +1,111 @@
+/*** theme ***/
+$color--primary: var(--theme-color, #409eff) !default;
+
+/*** color ***/
+$color--success:  #67c23a !default;
+$color--warning:  #e6a23c !default;
+$color--danger:   #f56c6c !default;
+$color--info:     #909399 !default;
+$color--white:    #ffffff !default;
+$color--black:    #333333 !default;
+$color--gray:     #707070 !default;
+$color--line:     #e4e7ed !default;
+$color--darkline: #d3d4d6 !default;
+$color--bg:       #f0f2f5 !default;
+
+/*** font-size ***/
+$font-size--3xs:  0.375rem  !default;
+$font-size--2xs:  0.575rem  !default;
+$font-size--xs:  0.75rem  !default;
+$font-size--sm:  0.875rem !default;
+$font-size--md:  1rem     !default;
+$font-size--lg:  1.125rem !default;
+$font-size--xl:  1.25rem  !default;
+$font-size--2xl: 1.5rem   !default;
+$font-size--3xl: 1.875rem !default;
+$font-size--4xl: 2.25rem  !default;
+$font-size--5xl: 3rem     !default;
+$font-size--6xl: 3.75rem  !default;
+$font-size--7xl: 4.5rem   !default;
+
+/*** margin & padding ***/
+$space--none: 0       !default;
+$space--xs:   0.25rem !default;
+$space--sm:   0.5rem  !default;
+$space--md:   0.75rem !default;
+$space--lg:   1rem    !default;
+$space--xl:   1.25rem !default;
+$space--2xl:  1.5rem  !default;
+$space--3xl:  1.75rem !default;
+$space--4xl:  2rem    !default;
+$space--5xl:  2.25rem !default;
+$space--6xl:  2.5rem  !default;
+$space--7xl:  2.75rem !default;
+$space--8xl:  3rem    !default;
+$space--9xl:  3.5rem  !default;
+$space--10xl: 4rem    !default;
+$space--11xl: 5rem    !default;
+
+/*** aside-bar ***/
+$aside-bar__shadow: 2px 0 6px hsla(209, 100%, 8%, 0.349) !default;
+$aside-bar__bg-color: hsl(213, 28%, 26%) !default;
+$aside-bar__text-color: hsl(212, 25%, 80%) !default;
+$aside-bar__text-color--active: $color--primary !default;
+$aside-bar__submenu-item__bg-color: hsl(212, 33%, 18%) !default;
+$aside-bar__submenu-item__bg-color--hover: hsl(209, 100%, 8%) !default;
+$aside-bar__header--height: 65px;
+$aside-bar__header--color: $color--white;
+
+/*** header-toolbar ***/
+$header-toolbar--height: 110px !default;
+$header-toolbar--shadow: 0 2px 5px rgba($color: #000, $alpha: 0.09) !default;
+$header-toolbar-toolbox--height: 55px !default;
+$header-toolbar-toolbox--shadow: 0 2px 5px rgba($color: #000, $alpha: 0.09) !default;
+$header-toolbar-tabbox--height: $header-toolbar--height - $header-toolbar-toolbox--height !default;
+
+/*** app-main ***/
+$app-main__bg-color: #f0f2f5 !default;
+
+/*** breadcrumb ***/
+$breadcrumb__no-redirect--color: #97a8be !default;
+
+/*** login ***/
+$login__bg: url('/imgs/login-bg.jpg') no-repeat center;
+
+:export {
+  /*** aside-bar ***/
+  ASIDE_BAR_BG_COLOR: $aside-bar__bg-color;
+  ASIDE_BAR_COLOR: $aside-bar__text-color;
+  ASIDE_BAR_ACTIVE_COLOR: $aside-bar__text-color--active;
+
+  /*** font-size ***/
+  SIZE_3XS: $font-size--3xs;
+  SIZE_2XS: $font-size--2xs;
+  SIZE_XS:  $font-size--xs;
+  SIZE_SM:  $font-size--sm;
+  SIZE_MD:  $font-size--md;
+  SIZE_LG:  $font-size--lg;
+  SIZE_XL:  $font-size--xl;
+  SIZE_2XL: $font-size--2xl;
+  SIZE_3XL: $font-size--3xl;
+  SIZE_4XL: $font-size--4xl;
+  SIZE_5XL: $font-size--5xl;
+  SIZE_6XL: $font-size--6xl;
+  SIZE_7XL: $font-size--7xl;
+
+  /*** theme-color ***/
+  DEFAULT: $color--primary;
+  PRIMARY: $color--primary;
+  SUCCESS: $color--success;
+  warning: $color--warning;
+  ERROR:   $color--danger;
+  INFO:    $color--info;
+
+  /*** color ***/
+  WHITE:   $color--white;
+  BLACK:   $color--black;
+
+  /*** header-toolbar ***/
+  HEADER_TOOLBAR_HEIGHT: $header-toolbar--height;
+  HEADER_TOOLBAR_TOOLBOX_HEIGHT: $header-toolbar-toolbox--height;
+}

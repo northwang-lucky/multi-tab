@@ -1,0 +1,29 @@
+@import './mixin.scss';
+@import './variables.scss';
+.el-dropdown-menu__item,
+.el-dropdown-menu__item--divided {
+  fill: $color--info;
+
+  &:hover {
+    fill: $color--primary;
+  }
+
+  svg {
+    padding-right: $space--sm;
+    vertical-align: middle;
+  }
+}
+
+.el-main {
+  padding: $space--2xl !important;
+}
+
+.el-scrollbar__bar {
+  &.is-horizontal {
+    height: 7px !important;
+  }
+
+  &.is-vertical {
+    width: 7px !important;
+  }
+}

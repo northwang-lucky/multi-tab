@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+@mixin flex($align: normal, $justify: normal, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin app-main-wrapper {
+  padding: $space--xl;
+  background-color: $color--white;
+}
+
+@mixin scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
