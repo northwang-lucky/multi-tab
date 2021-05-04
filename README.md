@@ -1,72 +1,26 @@
-# 目录结构
+# 项目简介
 
-```yaml
-├── public                                 # 静态资源 (不参与打包)
-|  ├── imgs                                # 位图图片资源
-|  ├── loading                             # 开屏动画资源
-|  ├── theme                               # 主题资源 
-|  ├── favicon.ico                         # 网站图标
-|  └── index.html                          # HTML模板文件
-├── src                                    # 源代码
-|  ├── assets                              # 静态资源 (参与打包)
-|  |  ├── icons                            # 图标资源
-|  |  |  ├── svg                           # 所有svg图标
-|  |  |  ├── index.ts                      # svg图标自动引入文件
-|  |  |  └── svgo.config.js                # svgo配置文件
-|  |  └── styles                           # sass样式资源
-|  |     ├── animation.scss                # 全局动画
-|  |     ├── element-reset.scss            # element样式重置
-|  |     ├── index.scss                    # 入口文件
-|  |     ├── mixin.scss                    # 全局样式混入
-|  |     ├── reset.scss                    # 浏览器默认样式重置
-|  |     ├── transition.scss               # 全局过度动画
-|  |     └── variables.scss                # 全局sass变量
-|  ├── components                          # 全局公共组件
-|  |  └── common                           # 原子组件
-|  |  |  ├── Contextmenu                   # 右键菜单组件
-|  |  |  └── SvgIcon                       # svg图标组件
-|  |  └── entity                           # 业务组件
-|  ├── consts                              # 全局常量
-|  ├── directive                           # 全局指令
-|  ├── layout                              # 主布局组件
-|  |  └── components
-|  |     ├── AppMain                       # 子级路由载体
-|  |     ├── AsideBar                      # 侧边栏组件
-|  |     |  └── components
-|  |     |     ├── MenuItem                # 菜单项组件
-|  |     |     ├── ModuleMenu              # 菜单组件
-|  |     |     └── SystemLogo              # 侧栏头部组件
-|  |     ├── HeaderToolbar                 # 头部工具栏组件
-|  |     |  └── components
-|  |     |     ├── PathBreadcrumb          # 面包屑组件
-|  |     |     ├── TagsPager               # 标签栏翻页组件
-|  |     |     └── TagsView                # 标签栏组件
-|  |     └── SettingPane                   # 系统设置面板组件
-|  ├── plugins                             # 全局插件
-|  |  ├── element-plus                     # element-plus引入
-|  |  ├── first-loading                    # 开屏动画引入
-|  |  ├── global-common                    # 全局组建引入
-|  |  ├── clipboard                        # clipboard
-|  |  └── n-progress                       # nProgress引入
-|  ├── router                              # 路由
-|  |  ├── modules                          # 路由模块
-|  |  ├── index.ts                         # 路由入口文件
-|  |  └── routes.ts                        # 路由配置文件
-|  ├── store                               # 全局状态管理
-|  |  ├── modules                          # 状态管理模块
-|  |  └── index.ts                         # 入口文件
-|  ├── typings                             # 全局ts类型声明
-|  ├── utils                               # 工具类
-|  |  ├── index.ts                         # 入口文件
-|  |  └── storage.ts                       # 缓存封装
-|  ├── views                               # 所有业务页面
-|  ├── App.vue                             # 页面入口文件
-|  ├── main.ts                             # 主入口文件
-|  ├── setting.ts                          # 系统配置
-|  └── shims-vue.d.ts                      # 单页面组件ts声明文件
-├── .eslintrc.js                           # eslint配置
-├── .prettierrc                            # prettier配置
-├── package.json                           # npm包管理
-├── tsconfig.json                          # typescript配置
-└── vue.config.js                          # vue-cli配置
-```
+为什么要做这么个项目呢？其实是因为前段时间在给一个企业做一个**后台管理系统**，然后就萌生了造轮子的想法。虽然，已经有**很多大佬**做出了很多很漂亮、功能丰富的模板，但是因为功能的凝练度太高，导致自己修改起来有些困难。同时有很多**新手**，自己去看那些大佬的源码是看不懂的。
+
+所以，我只将**基础部分的架构**，以及会用到的**知识点**总结出来，写成了这样一个项目。使用它的人，可以在这个的基础之上，忽视这些前端效果的实现，更专心的去编写自己的业务代码。
+
+同时，为了能让更多的人学会如何去编写这样一个后台系统管理模板，我写了**多篇博文**，专门为这个项目服务。想深入了解的同学可以去看一看（就是上面那些配套博文）。
+
+最后，介绍一下我自己吧。
+
+我是一个正在上大学的**穷酸学生**，快上大四了。平时比较喜欢鼓捣这些花里胡哨的前端的东西（其实后端也没有忽视啦）。因为快要大四了，也就意味着就快要毕业找工作了，所以开始写一些开源的东西（以前也在DCloud的插件市场中发布过一些插件，名字都是wyb开头的），提升一下简历的的可观度。所以，大家如果觉得我的努力帮助你**减少了工作量**，亦或是你通过我的项目**学到了一些东西**，希望可以**star一下**项目（这对我很重要），或者右上角打赏一杯奶茶什么的，我也会很开心的。
+
+最后，祝大家工作顺利，学习进步，笑口常开。
+
+
+
+# 文档地址
+
+> [https://wyb199877.github.io/multi-tab/docs](https://wyb199877.github.io/multi-tab/docs)
+
+
+
+# 演示地址
+
+> [https://wyb199877.github.io/multi-tab](https://wyb199877.github.io/multi-tab)
+
