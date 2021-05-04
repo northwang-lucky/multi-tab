@@ -36,6 +36,17 @@ const routes: RouteRecordRaw[] = [
           icon: 'workbench'
         }
       },
+      {
+        name: 'document',
+        path: 'document',
+        component: {},
+        meta: {
+          type: 'item',
+          label: '文档',
+          icon: 'doc',
+          onClick: () => window.open('https://wyb199877.github.io/multi-tab/docs', '_blank')
+        }
+      },
       ...modules,
       {
         name: 'officialWeb',
