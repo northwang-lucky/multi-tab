@@ -1,50 +1,63 @@
+/* eslint-disable no-unused-vars */
 import Cookies from 'js-cookie'
 
-class RootStorage {
-  private CURRENT_KEY = '_storage_8ba7'
-  private CURRENT_STORAGE = class {
-    public static setItem: any
-    public static getItem: any
-    public static removeItem: any
-  }
+const cookies: RootStorage = {
+  setItem: Cookies.set,
+  getItem: Cookies.get,
+  removeItem: Cookies.remove
+}
 
-  public constructor(storage: 'local' | 'session' | 'cookie') {
+type RootStorage = { setItem: any; getItem: any; removeItem: any }
+
+interface RootStorageProps {
+  CURRENT_KEY: string
+  CURRENT_STORAGE: RootStorage
+  init(storage: 'local' | 'session' | 'cookie'): RootStorageProps
+  getRoot(): any
+  setRoot(root: any): void
+  removeRoot(): void
+}
+
+const rootStorage: RootStorageProps = {
+  CURRENT_KEY: '_storage_key',
+  CURRENT_STORAGE: {
+    setItem: null,
+    getItem: null,
+    removeItem: null
+  },
+  init(storage: 'local' | 'session' | 'cookie') {
     switch (storage) {
       case 'local':
-        Object.assign(this.CURRENT_STORAGE, window.localStorage)
+        this.CURRENT_STORAGE = window.localStorage
         break
       case 'session':
-        Object.assign(this.CURRENT_STORAGE, window.sessionStorage)
+        this.CURRENT_STORAGE = window.sessionStorage
         break
       case 'cookie':
-        this.CURRENT_STORAGE.setItem = Cookies.set
-        this.CURRENT_STORAGE.getItem = Cookies.get
-        this.CURRENT_STORAGE.removeItem = Cookies.remove
+        this.CURRENT_STORAGE = cookies
         break
     }
-  }
-
-  public getRoot() {
+    return this
+  },
+  getRoot() {
     if (!this.CURRENT_STORAGE.getItem(this.CURRENT_KEY)) {
       this.CURRENT_STORAGE.setItem(this.CURRENT_KEY, JSON.stringify({}))
     }
     return JSON.parse(this.CURRENT_STORAGE.getItem(this.CURRENT_KEY)!)
-  }
-
-  public setRoot(root: any) {
+  },
+  setRoot(root: any) {
     this.CURRENT_STORAGE.setItem(this.CURRENT_KEY, JSON.stringify(root))
-  }
-
-  public removeRoot() {
+  },
+  removeRoot() {
     this.CURRENT_STORAGE.removeItem(this.CURRENT_KEY)
   }
 }
 
 class DataStorage {
-  private rootStorage: RootStorage
+  private rootStorage: RootStorageProps
 
   public constructor(storage?: 'local' | 'session' | 'cookie') {
-    this.rootStorage = new RootStorage(storage || 'cookie')
+    this.rootStorage = rootStorage.init(storage || 'cookie')
   }
 
   public setItem(key: string, value: any) {
